@@ -9,10 +9,15 @@
 
 char *_strchr(char *s, char c)
 {
+	char *rtn = NULL;
+
 	while (s)
 	{
 	if (*(s++) == c)
+	{
+	rtn = --s;
 	break;
 	}
-	return (--s);
+	}
+	return (rtn);
 }
